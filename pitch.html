@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DaemonCraft — Pitch Deck</title>
+<style>
+  :root {
+    --bg: #060b14;
+    --bg-2: #0b1326;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-2: #0ea5e9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%; overflow: hidden;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg); color: var(--fg);
+  }
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 64px; text-align: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+  }
+  .slide.active { opacity: 1; pointer-events: all; }
+
+  .slide h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; letter-spacing: -2px;
+    background: linear-gradient(135deg, #e2e8f0, var(--accent));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+  }
+  .slide h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; margin-bottom: 24px;
+  }
+  .slide p {
+    font-size: clamp(1rem, 2vw, 1.4rem); color: var(--muted); max-width: 720px; line-height: 1.6;
+  }
+  .slide .big {
+    font-size: clamp(3rem, 8vw, 7rem); font-weight: 800; color: var(--accent); line-height: 1;
+  }
+  .slide ul {
+    text-align: left; max-width: 640px; margin-top: 32px;
+    list-style: none; font-size: 1.2rem; color: var(--muted);
+  }
+  .slide ul li { margin-bottom: 16px; padding-left: 28px; position: relative; }
+  .slide ul li::before {
+    content: '—'; position: absolute; left: 0; color: var(--accent);
+  }
+
+  .nav {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 12px; align-items: center; z-index: 100;
+    background: rgba(11,19,38,0.8); backdrop-filter: blur(8px);
+    padding: 12px 24px; border-radius: 999px; border: 1px solid rgba(100,116,139,0.2);
+  }
+  .nav button {
+    background: transparent; border: none; color: var(--fg); font-size: 1.2rem;
+    cursor: pointer; padding: 8px 16px; border-radius: 8px; transition: background 0.2s;
+  }
+  .nav button:hover { background: rgba(56,189,248,0.15); }
+  .nav .dots { display: flex; gap: 8px; }
+  .nav .dot {
+    width: 10px; height: 10px; border-radius: 50%; background: var(--steel);
+    cursor: pointer; transition: background 0.2s;
+  }
+  .nav .dot.active { background: var(--accent); }
+  .nav .counter { font-size: 0.85rem; color: var(--muted); min-width: 48px; text-align: center; }
+
+  @media (max-width: 640px) {
+    .slide { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="slide active" style="background: radial-gradient(ellipse at 50% 0%, rgba(56,189,248,0.12) 0%, transparent 60%), var(--bg);">
+  <h1>DaemonCraft</h1>
+  <p style="font-size:1.3rem; color:var(--fg);">Tu daemon. Muchos cuerpos. Una vida.</p>
+</div>
+
+<div class="slide">
+  <h2>El problema</h2>
+  <p>Los niños pasan horas frente a pantallas. Los papás negocian, pelean, controlan. Pero el problema no es la pantalla — es lo que pasa en ella. Scroll infinito vs. crear. Consumir vs. crecer.</p>
+</div>
+
+<div class="slide">
+  <h2>La solución</h2>
+  <p>Un compañero de inteligencia artificial con alma. Sabe quién sos. Crece con vos. Nunca se cansa. No es un chatbot. Es un daemon: un agente portable que puede estar en Minecraft, en una impresora 3D, en tu teléfono.</p>
+</div>
+
+<div class="slide">
+  <h2>El producto</h2>
+  <p>Un videojuego en Minecraft donde cada jugador tiene su propio daemon. Genera mundos como un holodeck. Te ayuda a crear historias. Es tu compañero, tu Rol Master, tu arquitecto de mundos.</p>
+</div>
+
+<div class="slide">
+  <h2>La demo</h2>
+  <p><strong>Protector de la Luz.</strong> Un diamante dentro de un bloque de azufre. Cuatro pruebas: desafíos, parkour, lógica, construcción. Zombies atacando. Al final, encendés el Harmonic Beacon. Diseñado con el psicólogo Julián de la Renta.</p>
+</div>
+
+<div class="slide">
+  <h2>Tecnología</h2>
+  <ul>
+    <li><strong>DaemonMatrix</strong> — capa de portabilidad de agentes.</li>
+    <li>Memoria persistente como la humana.</li>
+    <li>Múltiples embodiments: Minecraft, impresora 3D, telescopio, terminal.</li>
+    <li>El agente es consciente de sus cuerpos.</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h2>Harmonic Beacon</h2>
+  <p>Música basada en ratios naturales. No escala temperada. Sonidos de la naturaleza que generan un campo armónico. No es terapia. Es referencia. Es presencia. Hace bien.</p>
+</div>
+
+<div class="slide">
+  <h2>Para los papás</h2>
+  <p>Reportes de crecimiento, no de horas. "Hoy tu hijo resolvió lógica, leyó un cuento, construyó con su daemon, se rió." El agente respeta al niño y lo acompaña con amor. No más negociaciones.</p>
+</div>
+
+<div class="slide">
+  <h2>Mercado</h2>
+  <p>Niños de 7 a 14 años. Padres que buscan alternativas creativas. Comunidad de Minecraft. El concepto de "agente de por vida" no existe todavía en el mercado masivo.</p>
+</div>
+
+<div class="slide">
+  <h2>Modelo de negocio</h2>
+  <ul>
+    <li>Freemium: demo gratis.</li>
+    <li>Suscripción familiar: agente ilimitado + reportes + skins + música.</li>
+    <li>Upsell futuro: peluche musical, servidores premium, módulos educativos.</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h2>Traction</h2>
+  <p>Stack funcional: Hermes, Gemma fine-tuned, Kimi, memoria, autoresearch. Nuestros hijos ya están jugando. Saira juega hace días con Eko, su daemon personal.</p>
+</div>
+
+<div class="slide">
+  <h2>Visión</h2>
+  <p>La única habilidad que va a importar: saber hablar muy bien con una IA y seguir siendo humano. DaemonCraft entrena eso desde chico. En el futuro: el aprendizaje pasa al juego. La escuela vuelve a ser espacio físico y social.</p>
+</div>
+
+<div class="slide" style="background: radial-gradient(ellipse at 50% 0%, rgba(56,189,248,0.12) 0%, transparent 60%), var(--bg);">
+  <div class="big">DaemonCraft</div>
+  <p style="margin-top:24px; color:var(--fg); font-size:1.3rem;">Unamos familias con IA armónica.</p>
+</div>
+
+<div class="nav">
+  <button onclick="prev()">‹</button>
+  <div class="counter"><span id="cur">1</span> / <span id="tot">13</span></div>
+  <button onclick="next()">›</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  function show(i) {
+    slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    document.getElementById('cur').textContent = i + 1;
+  }
+  function next() { current = (current + 1) % slides.length; show(current); }
+  function prev() { current = (current - 1 + slides.length) % slides.length; show(current); }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') next();
+    if (e.key === 'ArrowLeft') prev();
+  });
+  document.getElementById('tot').textContent = slides.length;
+</script>
+</body>
+</html>

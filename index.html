@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DaemonCraft</title>
+<style>
+  :root {
+    --bg: #060b14;
+    --bg-2: #0b1326;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-2: #0ea5e9;
+    --steel: #64748b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: rgba(6,11,20,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(100,116,139,0.2);
+    z-index: 100;
+  }
+  nav .container {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 64px;
+  }
+  nav .logo {
+    font-size: 1.4rem; font-weight: 700; letter-spacing: 1px;
+    color: var(--fg);
+  }
+  nav .logo span { color: var(--accent); }
+  nav .links a {
+    margin-left: 28px; font-size: 0.9rem; color: var(--muted); transition: color 0.2s;
+  }
+  nav .links a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 120px 24px 80px;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(56,189,248,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(14,165,233,0.08) 0%, transparent 50%),
+      var(--bg);
+  }
+  .hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800; letter-spacing: -2px; line-height: 1;
+    background: linear-gradient(135deg, #e2e8f0 0%, #38bdf8 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--muted); max-width: 640px; margin: 24px auto 0;
+  }
+  .hero .cta {
+    margin-top: 48px; display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  .btn {
+    padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem;
+    transition: all 0.2s; cursor: pointer; border: none;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56,189,248,0.25); }
+  .btn-ghost {
+    background: transparent; color: var(--fg); border: 1px solid var(--steel);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Sections */
+  section { padding: 100px 24px; }
+  section.alt { background: var(--bg-2); }
+  section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 16px;
+    text-align: center;
+  }
+  section .subtitle {
+    text-align: center; color: var(--muted); max-width: 600px; margin: 0 auto 64px;
+    font-size: 1.1rem;
+  }
+
+  /* Cards */
+  .cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: rgba(11,19,38,0.6);
+    border: 1px solid rgba(100,116,139,0.2);
+    border-radius: 16px; padding: 32px;
+    transition: all 0.2s;
+  }
+  .card:hover {
+    border-color: rgba(56,189,248,0.3);
+    transform: translateY(-4px);
+  }
+  .card h3 {
+    font-size: 1.2rem; margin-bottom: 12px; color: var(--accent);
+  }
+  .card p { color: var(--muted); font-size: 0.95rem; }
+
+  /* Feature row */
+  .feature {
+    display: flex; align-items: center; gap: 64px; flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+  .feature:last-child { margin-bottom: 0; }
+  .feature.reverse { flex-direction: row-reverse; }
+  .feature .text { flex: 1 1 400px; }
+  .feature .visual {
+    flex: 1 1 300px; min-height: 240px;
+    background: linear-gradient(135deg, rgba(56,189,248,0.1), rgba(14,165,233,0.05));
+    border: 1px solid rgba(100,116,139,0.2); border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem; color: var(--accent);
+  }
+  .feature h3 {
+    font-size: 1.6rem; margin-bottom: 16px;
+  }
+  .feature p { color: var(--muted); font-size: 1.05rem; }
+
+  /* Steps */
+  .steps {
+    display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+  }
+  .step {
+    background: rgba(11,19,38,0.6); border: 1px solid rgba(100,116,139,0.2);
+    border-radius: 16px; padding: 32px; width: 220px; text-align: center;
+  }
+  .step .num {
+    display: inline-block; width: 40px; height: 40px; line-height: 40px;
+    border-radius: 50%; background: var(--accent); color: var(--bg);
+    font-weight: 700; margin-bottom: 16px;
+  }
+  .step h4 { margin-bottom: 8px; }
+  .step p { color: var(--muted); font-size: 0.9rem; }
+
+  /* Footer */
+  footer {
+    text-align: center; padding: 48px 24px; color: var(--steel); font-size: 0.9rem;
+    border-top: 1px solid rgba(100,116,139,0.15);
+  }
+
+  @media (max-width: 720px) {
+    .feature { gap: 32px; }
+    .hero .cta { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 280px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">Daemon<span>Craft</span></div>
+    <div class="links">
+      <a href="#que-es">Qué es</a>
+      <a href="#aventura">Aventura</a>
+      <a href="#daemon">Daemon</a>
+      <a href="#padres">Para papás</a>
+      <a href="#empezar">Empezar</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>DaemonCraft</h1>
+    <p>Tu daemon nunca duerme. Tu aventura nunca termina. Un compañero de inteligencia artificial con alma, dentro de Minecraft.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#empezar">Descargar</a>
+      <a class="btn btn-ghost" href="#que-es">Ver cómo funciona</a>
+    </div>
+  </div>
+</section>
+
+<section id="que-es">
+  <div class="container">
+    <h2>¿Qué es DaemonCraft?</h2>
+    <p class="subtitle">Un videojuego en Minecraft donde cada jugador tiene su propio agente de IA. No es un NPC programado. Es un daemon: un compañero que te conoce, recuerda, aprende y crece con vos.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Te conoce</h3>
+        <p>Sabe quién sos, qué te gusta, cómo aprendés. Tiene memoria como un humano.</p>
+      </div>
+      <div class="card">
+        <h3>Crea contigo</h3>
+        <p>Genera mundos, construye, narra historias. Es tu arquitecto de mundos.</p>
+      </div>
+      <div class="card">
+        <h3>Nunca se cansa</h3>
+        <p>Está cuando lo necesites. De día o de noche.</p>
+      </div>
+      <div class="card">
+        <h3>Crece con vos</h3>
+        <p>De niño a adulto, tu daemon sigue ahí. Siempre es el mismo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aventura" class="alt">
+  <div class="container">
+    <div class="feature">
+      <div class="text">
+        <h3>Protector de la Luz</h3>
+        <p>Sos el protector de un diamante encerrado en azufre. Zombies lo quieren destruir. Vos y tu daemon deben superar cuatro pruebas: desafíos, parkour, lógica y construcción. Cada partida es diferente. Al final, encendés el Harmonic Beacon. Una experiencia diseñada con psicólogos para que jugar sea crecer.</p>
+      </div>
+      <div class="visual">💎</div>
+    </div>
+  </div>
+</section>
+
+<section id="daemon">
+  <div class="container">
+    <div class="feature reverse">
+      <div class="text">
+        <h3>Harmonic Beacon</h3>
+        <p>Música diseñada con ratios naturales. No escala temperada. Sonidos de la naturaleza. Es un campo armónico que trae al presente. No es terapia. Es simplemente lo que tu cuerpo necesita escuchar. Dentro del juego y fuera de él.</p>
+      </div>
+      <div class="visual">🎵</div>
+    </div>
+  </div>
+</section>
+
+<section id="padres" class="alt">
+  <div class="container">
+    <h2>Para papás</h2>
+    <p class="subtitle">No más peleas por la pantalla. DaemonCraft no mide horas: mide crecimiento.</p>
+    <div class="feature">
+      <div class="text">
+        <p>Recibí reportes de lo que tu hijo hizo hoy: resolvió problemas de lógica, leyó un cuento, construyó con su daemon, se rió, respondió preguntas complejas. El agente respeta a tu hijo y lo acompaña con amor. Vos podés hablar con el agente para ayudarlo a entender mejor a tu familia.</p>
+      </div>
+      <div class="visual">👨‍👩‍👧‍👦</div>
+    </div>
+  </div>
+</section>
+
+<section id="empezar">
+  <div class="container">
+    <h2>Cómo empezar</h2>
+    <p class="subtitle">En cuatro pasos estás adentro.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Descargá</h4>
+        <p>Descargá DaemonCraft y la app.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>Elegí</h4>
+        <p>Elegí tu personaje y la skin de tu daemon.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Respondé</h4>
+        <p>Unas preguntas para que tu daemon te conozca.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h4>Jugá</h4>
+        <p>Empezá la aventura. Tu daemon te espera.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a class="btn btn-primary" href="#">Descargar ahora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>DaemonCraft — Tu daemon. Muchos cuerpos. Una vida.</p>
+</footer>
+
+</body>
+</html>
