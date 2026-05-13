@@ -26,3 +26,10 @@ La infraestructura detrás permite que el contexto nunca se pierda.
 ### Repositorios
 
 Memoria y autoresearch están desarrollados en repositorios privados.
+
+### Estado técnico
+
+El stack base funciona. Falta construir:
+- La app / vórtice.
+- Los reportes para padres.
+- El demo jugable completo en Minecraft.

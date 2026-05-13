@@ -12,6 +12,39 @@ La primera versión ya está creada:
 - Música armónica con los principios del HIT.
 - Proyección del Mito Personal.
 
+**Estado:** el stack base funciona. El bot de Minecraft (Eko/Oráculo) está en desarrollo.
+
+## Equipo
+
+| Rol | Persona |
+|-----|---------|
+| CEO | Nicolás Echániz |
+| Video coder / Executive Assistant | Saira Asua |
+| CTO Researcher | Federico Bonino |
+| AI experto en IA | Mariano Fernández Méndez |
+| Developers | Anabella Scigliano, Pablo Bustos, Javier Jorge, Jeremías Castro |
+
+## Organización
+
+- **AlterMundi** es la empresa dueña del producto.
+- Es una ONG — Asociación Civil AlterMundi, CUIT 30714989827.
+- Dirección: Las Acacias 0 S:U205 M:68, José De La Quintana.
+
+## Financiamiento
+
+Por ahora se financia con dinero propio.
+
+## Costos estimados
+
+- Servidor de Minecraft y bots: hay que calcular.
+- Tokens de LLM: al menos $10/mes estimados.
+
+## Modelo de negocio
+
+- Freemium: demo gratis + onboarding.
+- Suscripción familiar: **$30**.
+- Upsell futuro: peluche físico, servidores premium, módulos educativos.
+
 ## Hitos
 
 - Primeros usuarios (niños de 7 a 14 años).

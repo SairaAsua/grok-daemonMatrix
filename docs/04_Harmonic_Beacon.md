@@ -21,3 +21,5 @@ Se puede escuchar la música del Harmonic Beacon fuera del juego.
 ## Futuro
 
 Se está diseñando un peluche que sea tu daemon. Tendría la música que hace bien. En una primera etapa se imagina que solo haga música y se mueva, como un compañero animal que no habla pero entiende de ratios y de armonía.
+
+**Estado actual:** la música del Beacon aún no suena dentro del juego. Es un desarrollo a futuro.

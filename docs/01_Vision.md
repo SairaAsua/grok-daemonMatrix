@@ -20,4 +20,15 @@ La única habilidad que va a importar en el futuro es **saber hablar muy bien co
 
 ## Visión educativa
 
-En el futuro, DaemonCraft podría reemplazar partes de la escuela tradicional. La parte de aprendizaje pasa al juego, con hitos que son importantes para la familia. Las instancias escolares migran a espacios donde los niños hagan deporte. Se vuelve a la escuela personalizada.
+En el futuro, DaemonCraft podría reemplazar partes de la escuela tradicional. La parte de aprendizaje pasa al juego, con hitos que son importantes para la familia. Las instancias escolares migran a espacios donde los niños hagan deporte.
+
+Se vuelve a la escuela personalizada.
+
+## Estado actual
+
+Etapa bebé. El stack técnico base funciona (bot de Minecraft, agente, memoria). Falta:
+- Construir el demo jugable en Minecraft.
+- Inventar la app / vórtice.
+- Inventar los reportes de crecimiento para padres.
+- Integrar la música del Harmonic Beacon (a futuro).
+- Definir las 4 pruebas del demo leyendo la documentación de Julián de la Renta.

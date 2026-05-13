@@ -49,7 +49,7 @@ Un videojuego en Minecraft donde cada jugador tiene su propio daemon.
 
 Una resignificación del Camino del Héroe.
 
-Sos el Protector de la Luz. Un diamante dentro de un bloque de azufre.
+Sos el el demo. Tu propio mito personal.
 Cuatro pruebas: desafíos, parkour, lógica, construcción.
 Zombies atacando constantemente.
 

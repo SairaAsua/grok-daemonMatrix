@@ -17,3 +17,8 @@ Solo eso. Sin subtítulos, sin copetes, sin taglines.
 **Acero-azul**
 
 Tonos fríos de acero, azul eléctrico y azul profundo.
+
+## Arte visual
+
+- El daemon se inspira en un **allay de Minecraft**.
+- Elementos de agua y **peces koi** como parte del lenguaje visual del mundo.

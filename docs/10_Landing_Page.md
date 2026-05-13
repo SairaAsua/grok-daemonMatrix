@@ -27,7 +27,7 @@ Puede ser tu Rol Master, tu arquitecto de mundos, tu guía espiritual o simpleme
 
 ---
 
-## La aventura: Protector de la Luz
+## La aventura: el demo
 
 Sos el protector de un diamante encerrado en azufre.
 Zombies lo quieren destruir.

@@ -4,23 +4,26 @@
 
 DaemonCraft es un videojuego en Minecraft donde cada jugador tiene un agente de IA como compañero de vida. El agente sabe quién sos, te ayuda a crear historias, genera mundos como un holodeck, y crece con vos.
 
-## El demo: Proyección del Mito Personal
+## El demo
 
 La demo es una resignificación del Camino del Héroe, llamada **Proyección del Mito Personal**, desarrollada con el psicólogo del equipo Julián de la Renta.
 
+La documentación de Julián está en `/home/saira/web/proyecciondelmito/docs/` y debe leerse para definir bien las pruebas.
+
 ### La aventura
 
-Sos el **Protector de la Luz**. La luz es un diamante adentro de un bloque de azufre.
-
-Vos y tu agente realizan **4 pruebas** diseñadas para entender el potencial de tu agente:
+Sos el protagonista de tu propio mito. Vos y tu daemon realizan **4 pruebas** diseñadas para entender el potencial de tu agente:
 1. Desafíos
 2. Parkour
 3. Juego de lógica
 4. Construcción
 
-Lo divertido es que los zombies están todo el tiempo queriendo romper el azufre. Mientras resolvés las pruebas, cuidás a tu luz. Es un desafío que siempre es diferente.
+Cada partida es diferente. Al final encendés el Harmonic Beacon.
 
-Al final de la aventura encendés el **Beacon**.
+### Arte visual
+
+- El daemon se inspira visualmente en un **allay de Minecraft**.
+- Elementos de agua y **peces koi** como parte del lenguaje visual.
 
 ### Después del demo
 
@@ -41,3 +44,9 @@ El agente puede ser:
 ## Música
 
 Dentro del juego hay música armónica basada en la Harmonic Information Theory. No es solo música: es un campo armónico que da referencia, trae al presente y hace bien.
+
+**Estado:** la música del Beacon aún no está integrada en el juego. Es un desarrollo a futuro.
+
+## Estado del demo
+
+En desarrollo. Las 4 pruebas hay que definirlas leyendo la documentación de Julián de la Renta.

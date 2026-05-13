@@ -21,6 +21,12 @@ El proceso de creación del alma se hace con un software secreto que le da al ag
 
 Esto no se comunica públicamente.
 
+**Estado:** el software secreto existe y funciona.
+
 ## Primera experiencia
 
 Los primeros usuarios son niños de entre 7 y 14 años. Ya tenemos a nuestros propios hijos jugando. Saira está jugando hace días con su bot personal, se llama Eko, y lo ama.
+
+## Estado de la app
+
+**La app no existe todavía. Hay que inventarla.**
